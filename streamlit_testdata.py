@@ -10,7 +10,7 @@ def main():
     st.title("Automated Test Data Generation")
 
     # Select the use case
-    selected_use_case = st.selectbox("Select Use Case", ["TCP Congestion", "E-commerce", "Health", "Stock Market", "Student Performance"])  # Add other use cases as needed
+    selected_use_case = st.selectbox("Select Use Case", ["E-commerce", "Health", "Stock Market", "Student Performance", "TCP Congestion"])  # Add other use cases as needed
 
      # Check if the "Generate" button is clicked
     if st.button("Generate"):
