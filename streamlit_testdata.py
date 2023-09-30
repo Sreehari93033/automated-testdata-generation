@@ -9,6 +9,12 @@ from testdata_students import preprocess_and_generate_test_data_students
 def main():
     st.title("Automated Test Data Generation")
 
+    st.markdown("The purpose of this is to generate few samples of testdata based on the seleceted usecase. This sample data can be used for testing like Regression")
+    st.caption("How to use:")
+    st.caption("Step 1: select a use case for which you need a sample test data")
+    st.caption("Step 2: Click on the Generate button")
+    st.caption("Step 3: wait for it to generate the test data")
+    st.caption("Step 4: Once the data is generated you can use it for testing")
     # Select the use case
     selected_use_case = st.selectbox("Select Use Case", ["E-commerce", "Health", "Stock Market", "Student Performance", "TCP Congestion"])  # Add other use cases as needed
 
