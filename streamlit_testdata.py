@@ -14,9 +14,7 @@ def main():
 
      # Check if the "Generate" button is clicked
     if st.button("Generate"):
-        if selected_use_case == "TCP Congestion":
-            test_data, mse = preprocess_and_generate_test_data_tcp()
-        elif selected_use_case == "E-commerce":
+        if selected_use_case == "E-commerce":
             test_data, mse = preprocess_and_generate_test_data_ecomm()
         elif selected_use_case == "Health":
             test_data, mse = preprocess_and_generate_test_data_health()
@@ -24,6 +22,8 @@ def main():
             test_data, mse = preprocess_and_generate_test_data_stocks()
         elif selected_use_case == "Student Performance":
             test_data, mse = preprocess_and_generate_test_data_students()
+        elif selected_use_case == "TCP Congestion":
+            test_data, mse = preprocess_and_generate_test_data_tcp()
         # Display the generated test data
         st.subheader("Generated Test Data:")
         display_test_data(test_data)
