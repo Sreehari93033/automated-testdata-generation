@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automated Test Data Generation</title>
+</head>
+<body>
+    <h1>Automated Test Data Generation</h1>
+    <form method="POST" action="/generate_test_data">
+        <label for="use_case">Select a Use Case:</label>
+        <select name="use_case" id="use_case">
+            <option value="tcp_congestion">TCP Congestion</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="students">Students</option>
+            <option value="stock">Stock Market</option>
+            <option value="health">Health</option>
+        </select>
+        <input type="submit" value="Generate Test Data">
+    </form>
+    {% if generated_data %}
+    <h2>Generated Test Data:</h2>
+    <table>
+        <tr>
+            <th>Test Data</th>
+            <th>Original Delay</th>
+        </tr>
+        {% for item in generated_data %}
+        <tr>
+            <td>{{ item.test_data }}</td>
+            <td>{{ item.original_delay }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>
