@@ -7,7 +7,7 @@ from testdata_students import preprocess_and_generate_test_data_students
 
 # Streamlit app code
 def main():
-    st.title("Automated Test Data Generation using ML")
+    st.title("Automated Test Data Generation using Machine Learning")
 
     st.markdown("The purpose of this is to generate few samples of testdata based on the seleceted usecase. This sample data can be used for testing like Regression")
     st.caption("How to use:")
